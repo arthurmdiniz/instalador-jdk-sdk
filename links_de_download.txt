@@ -1,0 +1,87 @@
+=====================================================================
+  LINKS PARA DOWNLOAD - KIT DE INSTALACAO (qualquer maquina Windows 10/11)
+  Windows 10/11 - 64 bits
+=====================================================================
+
+Os scripts 01, 02 e 03 JA BAIXAM estes arquivos sozinhos quando nao
+acham na pasta  Installers\  . Voce nao precisa fazer nada manualmente.
+
+Esta lista serve para:
+  - conferir de onde os scripts baixam;
+  - baixar de antemao (util se a maquina ficar sem internet depois);
+  - trocar as versoes fixadas por outras mais novas.
+
+Para usar de antemao, coloque os arquivos em  Installers\  com os
+nomes oficiais (nao renomeie). O script usa o que ja estiver la e nao
+baixa nada.
+
+---------------------------------------------------------------------
+  1) OpenJDK 25 (Microsoft Build)  ->  Installers\microsoft-jdk-...
+---------------------------------------------------------------------
+   Formato: .msi (x64)
+   Nome esperado: microsoft-jdk-25.0.4.1-windows-x64.msi
+   Link direto (188,8 MB):
+     https://aka.ms/download-jdk/microsoft-jdk-25.0.4.1-windows-x64.msi
+   Pagina oficial (caso o link direto mude):
+     https://learn.microsoft.com/pt-br/java/openjdk/download
+   Checksum:
+     https://aka.ms/download-jdk/microsoft-jdk-25.0.4.1-windows-x64.msi.sha256sum.txt
+
+---------------------------------------------------------------------
+  2) .NET SDK 10.0.401  ->  Installers\dotnet-sdk-....
+---------------------------------------------------------------------
+   Formato: .exe (x64)
+   Nome esperado: dotnet-sdk-10.0.401-win-x64.exe
+   Link direto (205,5 MB):
+     https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.401/dotnet-sdk-10.0.401-win-x64.exe
+   Pagina oficial:
+     https://dotnet.microsoft.com/pt-br/download/dotnet/10.0
+   Observacao: use builds.dotnet.microsoft.com. A pagina
+   /download/dotnet/thank-you/... e um HTML de confirmacao, NAO o
+   instalador.
+
+---------------------------------------------------------------------
+  3) Visual Studio Code - instalador SYSTEM (x64)
+---------------------------------------------------------------------
+   Formato: .exe
+   Nome esperado: VSCodeSetup-x64-<versao>.exe
+   Link direto, versao estavel mais recente (222,1 MB):
+     https://update.code.visualstudio.com/latest/win32-x64/stable
+   Versao fixada (mesma do kit, 1.139.0):
+     https://update.code.visualstudio.com/1.139.0/win32-x64/stable
+   Pagina oficial:
+     https://code.visualstudio.com/download
+   Observacao: o caminho update.code.visualstudio.com/latest/
+   win32-x64/stable e o do instalador SYSTEM (para a maquina). Nao
+   acrescente "-system" nem "-user" ao caminho. O script 03 exige o
+   SYSTEM: o USER instala em %LOCALAPPDATA% e reprova na verificacao.
+
+---------------------------------------------------------------------
+  4) Extensoes do VS Code
+---------------------------------------------------------------------
+   NAO e necessario baixar nada. Os passos 04 e 05 instalam pelo
+   identificador, e o proprio VS Code baixa da loja oficial:
+
+     Java (passo 04):
+       vscjava.vscode-java-pack     (traz junto o Language Support,
+                                     Debugger, Test Runner, Maven,
+                                     Gradle e Project Manager)
+     C# (passo 05):
+       ms-dotnettools.csharp
+       ms-dotnettools.csdevkit
+       ms-dotnettools.vscode-dotnet-runtime
+
+---------------------------------------------------------------------
+  Notas
+---------------------------------------------------------------------
+  - Passive de internet: o script 01, 02 e 03 baixam o que faltar
+    (cerca de 616 MB na primeira execucao). Depois disso a instalacao
+    usa apenas os arquivos locais, em Installers\.
+  - Passive de internet em um laboratorio isolado: baixe os 3 arquivos
+    em outra maquina, copie para  Installers\  e rode o instalador.
+    As extensoes do VS Code, nesse caso, precisam de acesso a loja
+    oficial - nao ha mais arquivos .vsix no kit.
+  - Se quiser ajuda de instalacao manual, os roteiros oficiais estao
+    na pasta  Manual\  e nestas paginas:
+      JDK : https://learn.microsoft.com/pt-br/java/openjdk/install
+      .NET: https://learn.microsoft.com/pt-br/dotnet/core/install/windows

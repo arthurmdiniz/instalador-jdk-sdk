@@ -1,0 +1,17 @@
+# Artefatos baixados pelo instalador (nao vao para o repositorio)
+Installers/
+_extensoes-download/
+
+# Log gerado a cada execucao
+install-log.txt
+
+# Downloads temporarios
+*.tmp
+_download.tmp
+
+# Sem uso desde as extensoes passarem a ser instaladas por identificador
+Extensoes/
+*.vsix
+
+# Instrucoes locais para agentes de codigo (nao vao para o repositorio)
+AGENTS.md

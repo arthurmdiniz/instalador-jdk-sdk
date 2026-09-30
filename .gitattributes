@@ -1,0 +1,9 @@
+# Normaliza quebras de linha no repositorio
+* text=auto
+
+# O cmd.exe depende de CRLF: um .bat com LF quebra goto/label.
+# Forcar tambem no checkout, para o .bat funcionar em qualquer maquina.
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.txt text eol=crlf
+*.md   text eol=crlf
